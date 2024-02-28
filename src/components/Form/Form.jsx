@@ -56,7 +56,7 @@ const Form = ({datosForm,setDatosForm,setShow}) => {
         </div>
         <div className="form-group">
           <label className="exampleInputPassword1">Color: </label>
-          <input type="text" value={color} className="form-control" placeholder="Color favorito en HEX" onChange={handleChangeColor}/>
+          <input type="text" value={color} className="form-control" placeholder="Color favorito en HEX (#33E9FF)" onChange={handleChangeColor}/>
         </div>
         <button type="submit" className="btn btn-primary">Enviar</button>
       </form>
