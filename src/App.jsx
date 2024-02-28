@@ -1,13 +1,23 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import Form from './components/Form/Form'
+import Card from './components/Card/Card';
 
 function App() {
-  // const [count, setCount] = useState(0)
+  const [datosForm,setDatosForm] = useState({
+    nombre:'',
+    color:'',
+  })
+
+  console.log(datosForm)
+
+  const [show,setShow] = useState(false);
 
   return (
-    <h1>Examen 1 - Frontend III</h1>
+    <>
+      <Form datosForm={datosForm} setDatosForm={setDatosForm} setShow={setShow}/>
+      {show && <Card datosForm={datosForm}/>}
+    </>
   )
 }
 
